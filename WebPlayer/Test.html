@@ -1,0 +1,58 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css" type="text/css" />
+    <link href="mixins.css" rel="stylesheet">
+    <link href="player.css" rel="stylesheet">
+</head>
+<body>
+        <div class="player small">
+                <div class="monkey-player player-1">
+                   <div class="monkey-player-controls">
+                     <button class="monkey-play" onclick="playAudio()">
+                       <i class="fa fa-play"></i>
+                       <span>Play</span>
+                     </button>
+                     <button class="monkey-pause" style="display: none;">
+                       <i class="fa fa-pause"></i>
+                       <span>Pause</span>
+                     </button>
+                     <button class="monkey-rewind">
+                       <i class="fa fa-fast-backward"></i>
+                       <span>Rewind</span>
+                     </button>
+                     <span class="monkey-currenttime monkey-time">00:00:00</span>
+                     <progress class="monkey-progress" value="0" max="5707"></progress>
+                     <span class="monkey-position" style="display: none; left: 248.438px;"></span>
+                     <span class="monkey-duration monkey-time">01:35:07</span>
+                     <button class="monkey-speed">1x</button>
+                     <button class="monkey-mute">
+                       <i class="fa fa-volume-up"></i>
+                       <span>Mute/Unmute</span>
+                     </button>
+                     <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey126.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 126');">
+                       <i class="fa fa-download"></i>
+                       <span>Download</span>
+                     </button>
+                   </div>
+     
+                   <audio id="audio">
+                       <source src="Assets/01. Perfect Timing (Intro).mp3" type="audio/mp3">
+                   </audio>
+     
+                </div>
+             </div>
+             <script>
+             var x = document.getElementById("audio"); 
+             function playAudio() { 
+               x.play();
+               } 
+             </script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+/* Breakpoints
+...................................................................................... */
+/* Helpers
+...................................................................................... */
+/* Classes
+...................................................................................... */
+.height-fix {
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  clear: both;
+}
+
+.inline-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.days-active {
+  color: #F41B40;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mf-red {
+  color: #ef3f57;
+}
+
+.player {
+  font-weight: 200;
+  background-color: #fff;
+  position: relative;
+}
+
+.player.full {
+  padding-bottom: 30px;
+}
+
+.visually-hidden, .monkey-player button span {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* Its A Monkey - Custom Player */
+.monkey-player .monkey-player-controls {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #00aeef;
+  color: #FFFFFF;
+  font-size: 14px;
+  height: 80px;
+  overflow: hidden;
+  padding: 25px 20px;
+  position: relative;
+}
+
+.monkey-player button {
+  background: #0095cc;
+  color: #fff;
+  border: 0;
+  border-radius: 50px;
+  padding: 5px;
+  line-height: 22px;
+  -webkit-appearance: none;
+  min-width: 32px;
+  outline: none;
+}
+
+.monkey-player .monkey-progress {
+  height: 13px;
+  width: calc(100% - 310px);
+  opacity: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .monkey-player .monkey-progress {
+    width: calc(100% - 100px);
+    padding-top: 2px;
+  }
+}
+
+.monkey-player .monkey-progress[value]::-webkit-progress-bar {
+  background-color: #00aeef;
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.monkey-player .monkey-progress[value]::-webkit-progress-value {
+  background: #0095cc;
+}
+
+.monkey-player .monkey-position {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  background: #FFFFFF;
+  height: 11px;
+  width: 2px;
+  opacity: 1;
+  bottom: 34.5px;
+  left: 153px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.monkey-player .monkey-time {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0 5px;
+  text-align: center;
+  width: 4.5em;
+}
+
+.monkey-player .monkey-speed {
+  width: 2.5em;
+}
+
+.monkey-player .monkey-pause {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .monkey-player .monkey-duration, .monkey-player .monkey-speed, .monkey-player .monkey-mute, .monkey-player .monkey-download, .monkey-player .monkey-rewind {
+    display: none;
+  }
+}
+/*# sourceMappingURL=player.css.map */

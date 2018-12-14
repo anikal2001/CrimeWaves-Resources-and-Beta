@@ -1,0 +1,114 @@
+@import 'mixins.scss';
+
+
+.player {
+    @include fontWeight(light);
+    background-color: #fff;
+    position: relative;
+
+    &.full {
+        padding-bottom: 30px;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/* Its A Monkey - Custom Player */
+.monkey-player {
+  .monkey-player-controls {
+    box-sizing: border-box;
+    background: $color-blue;
+    color: $color-white;
+    font-size: 14px;
+    height: 80px;
+    overflow: hidden;
+    padding: 25px 20px;
+    position: relative;
+  }
+
+  button {
+    background: $color-blue-dark;
+    color: #fff;
+    border: 0;
+    border-radius: 50px;
+    padding: 5px;
+    line-height: 22px;
+    -webkit-appearance: none;
+    min-width: 32px;
+    outline: none;
+
+    span {
+      @extend .visually-hidden;
+    }
+  }
+
+  .monkey-progress {
+    height: 13px;
+    width: calc(100% - 310px);
+    opacity: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+          appearance: none;
+
+    @include mediaBreakpoint(mobile) {
+      width: calc(100% - 100px);
+      padding-top: 2px;
+    }
+  }
+
+  .monkey-progress[value]::-webkit-progress-bar {
+    background-color: $color-blue;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  .monkey-progress[value]::-webkit-progress-value  {
+    background: $color-blue-dark;
+  }
+
+  .monkey-position {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    background: $color-white;
+		height: 11px;
+		width: 2px;
+  	opacity: 1;
+		bottom: 34.5px;
+		left: 153px;
+		cursor: pointer;
+		pointer-events: none;
+	}
+
+  .monkey-time {
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 5px;
+    text-align: center;
+    width: 4.5em;
+  }
+
+  .monkey-speed {
+    width: 2.5em;
+  }
+
+	.monkey-pause {
+		display: none;
+	}
+
+  .monkey-duration, .monkey-speed, .monkey-mute, .monkey-download, .monkey-rewind {
+    @include mediaBreakpoint(mobile) {
+      display: none;
+    }
+  }
+}
