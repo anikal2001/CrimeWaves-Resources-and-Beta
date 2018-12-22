@@ -19,20 +19,18 @@ function menuScroll(){
         document.getElementById("topnav").className = "test";
         var x = document.getElementById("topnav");
         var y = x.getElementsByTagName("a");
-        var i;
-        for (i = 0; i < y.length; i++) {
-            y[i].style.color = "black";
+        for (var i = 0; i < y.length; i++) {
             y[i].style.fontWeight = "600";
         }
- 
+
         }else {
         document.getElementById("topnav").className = "test1";
         var x = document.getElementById("topnav");
         var y = x.getElementsByTagName("a");
         var i;
         for (i = 0; i < y.length; i++) {
-            y[i].style.color = "white";
             y[i].style.fontWeight = "600";
         }
+
         }
     }
