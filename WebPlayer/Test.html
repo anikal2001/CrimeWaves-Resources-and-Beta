@@ -5,52 +5,221 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" type="text/css" />
     <link href="mixins.css" rel="stylesheet">
     <link href="player.css" rel="stylesheet">
 </head>
 <body>
-        <div class="player small">
-                <div class="monkey-player player-1">
-                   <div class="monkey-player-controls">
-                     <button class="monkey-play" onclick="playAudio()">
-                       <i class="fa fa-play"></i>
-                       <span>Play</span>
-                     </button>
-                     <button class="monkey-pause" style="display: none;">
-                       <i class="fa fa-pause"></i>
-                       <span>Pause</span>
-                     </button>
-                     <button class="monkey-rewind">
-                       <i class="fa fa-fast-backward"></i>
-                       <span>Rewind</span>
-                     </button>
-                     <span class="monkey-currenttime monkey-time">00:00:00</span>
-                     <progress class="monkey-progress" value="0" max="5707"></progress>
-                     <span class="monkey-position" style="display: none; left: 248.438px;"></span>
-                     <span class="monkey-duration monkey-time">01:35:07</span>
-                     <button class="monkey-speed">1x</button>
-                     <button class="monkey-mute">
-                       <i class="fa fa-volume-up"></i>
-                       <span>Mute/Unmute</span>
-                     </button>
-                     <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey126.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 126');">
-                       <i class="fa fa-download"></i>
-                       <span>Download</span>
-                     </button>
-                   </div>
-     
-                   <audio id="audio">
-                       <source src="Assets/01. Perfect Timing (Intro).mp3" type="audio/mp3">
-                   </audio>
-     
-                </div>
+    <button class="accordion">Episode 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="player">
+            <div class="monkey-player player-1">
+               <div class="monkey-player-controls">
+                 <button id="monkey-play" onclick="playAudio();">
+                   <i class="fa fa-play"></i>
+                 </button>
+                 <button id="monkey-pause"onclick="pauseAudio();">
+                   <i class="fa fa-pause"></i>
+                 </button>
+                 <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
+                 <progress id= "progress" class="monkey-progress"></progress>
+                 <span class="monkey-position" style="display: none; left: 463px;"></span>
+                 <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
+                 <button id="monkey-mute" onclick="mute();">
+                   <i id="muteIcon" class="fa fa-volume-up"></i>
+                 </button>
+                 <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
+                   <i class="fa fa-download"></i>
+                 </button>
+                 <button onclick="RewindAudio();">
+                    <i class="fas fa-step-backward"></i>
+                  </button>
+                 <button onclick="forwardAudio();">
+                   <i class="fas fa-step-forward"></i>
+                 </button>
+               </div>
+               <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
+                <source src="/Assets/Difference-(Mr-Jatt.com).mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+         </div>
+        
+    </div>
+    
+    <button class="accordion">Episode 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="player">
+          <div class="monkey-player player-1">
+             <div class="monkey-player-controls">
+               <button id="monkey-play" onclick="playAudio();">
+                 <i class="fa fa-play"></i>
+               </button>
+               <button id="monkey-pause"onclick="pauseAudio();">
+                 <i class="fa fa-pause"></i>
+               </button>
+               <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
+               <progress id= "progress" class="monkey-progress"></progress>
+               <span class="monkey-position" style="display: none; left: 463px;"></span>
+               <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
+               <button id="monkey-mute" onclick="mute();">
+                 <i id="muteIcon" class="fa fa-volume-up"></i>
+               </button>
+               <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
+                 <i class="fa fa-download"></i>
+               </button>
+               <button onclick="RewindAudio();">
+                  <i class="fas fa-step-backward"></i>
+                </button>
+               <button onclick="forwardAudio();">
+                 <i class="fas fa-step-forward"></i>
+               </button>
              </div>
+             <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
+              <source src="/Assets/Difference-(Mr-Jatt.com).mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+       </div>
+    </div>
+    
+    <button class="accordion">Episode 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="player">
+          <div class="monkey-player player-1">
+             <div class="monkey-player-controls">
+               <button id="monkey-play" onclick="playAudio();">
+                 <i class="fa fa-play"></i>
+               </button>
+               <button id="monkey-pause"onclick="pauseAudio();">
+                 <i class="fa fa-pause"></i>
+               </button>
+               <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
+               <progress id= "progress" class="monkey-progress"></progress>
+               <span class="monkey-position" style="display: none; left: 463px;"></span>
+               <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
+               <button id="monkey-mute" onclick="mute();">
+                 <i id="muteIcon" class="fa fa-volume-up"></i>
+               </button>
+               <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
+                 <i class="fa fa-download"></i>
+               </button>
+               <button onclick="RewindAudio();">
+                  <i class="fas fa-step-backward"></i>
+                </button>
+               <button onclick="forwardAudio();">
+                 <i class="fas fa-step-forward"></i>
+               </button>
+             </div>
+             <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
+              <source src="/Assets/Difference-(Mr-Jatt.com).mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+       </div>
+    
+    </div>
+    
              <script>
-             var x = document.getElementById("audio"); 
+//Turning JS time into regular time
+             function formatSecondsAsTime(secs, format) {
+               var hr  = Math.floor(secs / 3600);
+               var min = Math.floor((secs - (hr * 3600))/60);
+               var sec = Math.floor(secs - (hr * 3600) -  (min * 60));
+               if (min < 10){ 
+                  min = "0" + min; 
+                  }
+                  if (sec < 10){ 
+                    sec  = "0" + sec;
+                     }
+                     return min + ':' + sec;
+                     }
+//Getting the song by id
+             var audio = document.getElementById("myAudio")
+
+//Play and Pause Audio
              function playAudio() { 
-               x.play();
-               } 
+              audio.play();
+              document.getElementById("monkey-play").style.display = "none";
+              document.getElementById("monkey-pause").style.display="inline-block";
+              //document.getElementById("monkey-pause").onclick= function(){ pauseAudio(); }
+              } 
+
+               function pauseAudio(){
+              audio.pause();
+              document.getElementById("monkey-play").style.display = "inline-block";
+              document.getElementById("monkey-pause").style.display="none";
+              //document.getElementById("monkey-pause").onclick= function(){ playAudio(); }
+               }
+//Mute and Unmute function
+               function mute(){
+                document.getElementById("muteIcon").className = "fa fa-volume-mute";
+                audio.muted=true;
+                document.getElementById("monkey-mute").onclick= function(){unmute();};
+              }
+
+              function unmute(){
+                document.getElementById("muteIcon").className = "fa fa-volume-up";
+                audio.muted=false;
+                document.getElementById("monkey-mute").onclick= function(){mute();};
+              }
+//Forward Audio Function
+              function forwardAudio() {
+                audio.currentTime += 30.0; /**tried also with audio.currentTime here. Didn't worked **/
+              }
+
+              function RewindAudio() {
+                audio.currentTime -= 30.0; /**tried also with audio.currentTime here. Didn't worked **/
+              }
+//Update Time and Progress
+              function updateTrackTime(track){
+                var currTimeDiv = document.getElementById('demo');
+                var durationDiv = document.getElementById('duration');
+
+                var currTime = Math.floor(track.currentTime).toString();
+                var duration = Math.floor(track.duration).toString();
+
+                var percentage = currTime / duration
+                document.getElementById("progress").value = percentage;
+
+                currTimeDiv.innerHTML = formatSecondsAsTime(currTime);
+
+                if (isNaN(duration)){
+                  durationDiv.innerHTML = '00:00';
+                  } 
+                else{
+                  durationDiv.innerHTML = formatSecondsAsTime(duration);
+                  }
+              }
+//Skip Forward Code
+              var player = document.querySelector("audio");
+              var progressBar = document.querySelector("progress");
+              progressBar.addEventListener("click", seek);
+              
+              function seek(e) {
+                var percent = e.offsetX / this.offsetWidth;
+                player.currentTime = percent * player.duration;
+                progressBar.value = percent / 100;
+              }
+//Accordion Code
+              var acc = document.getElementsByClassName("accordion");
+              var i;
+
+              for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var panel = this.nextElementSibling;
+                  if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                  } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                  } 
+                });
+              }
              </script>
 
 </body>
