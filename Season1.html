@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="/WebPlayer/mixins.css">
+        <link rel="stylesheet" href="/WebPlayer/player.css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine|Unlock" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
@@ -13,26 +14,40 @@
                                 <i class="fa fa-caret-down"></i>
                         </button>
                               <div class="dropdown-content">
-                                <a href="Season1.html">Season 1</a>
+                                <a href="#">Season 1</a>
                                 <a href="#">Season 2</a>
                                 <a href="#">Season 3</a>
                               </div>
                         </div>
-                        <a href="AboutPage.html">About</a> 
+                        <a href="AboutPage.html">About</a>   
+                        <a href="Contact.html">Contact</a>  
                         <a href="about.html">aboot</a>
                 </div>
         </header>
         <body class = "bodystyling">
+                
                 <div id="parallax">
                         <h1>CRIME WAVES</h1>
                         <button class="headerButton" onclick="showPlayer();"><span>Listen Now</span> </span></button>
                 </div>
-                <a href="https://www.google.ca/">
-                        <div class="MiddleDiv BackgroundImage">
-                                <button class="season1"><span><img>Listen Now</span> </span></button>
-                         </div>
-                </a>
-                </a>
+        <div class="seasonAccordions">
+                <button class="accordion">Episode 1</button>
+                <div class="panel">
+                        <h1>The Landscaper</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <button class="playButton" onclick="showPlayer();"><span><i class="far fa-play-circle"></i>  Listen Now</span> </span></button>
+                </div>
+                
+                <button class="accordion">Episode 2</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Episode 3</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+        </div>
                 <div class="paraStyling">
                     <h1>Scroll Up and Down this page to see the parallax scrolling effect.
                     This div is just here to enable scrolling.
@@ -43,31 +58,48 @@
                             
                             Proin mattis, ex sed auctor aliquam, lectus massa sagittis orci, id lobortis ligula dolor eu massa. Duis mattis ante in lacus interdum interdum. Duis vestibulum sit amet dui sed facilisis. Suspendisse potenti. Sed eu arcu at eros dapibus pulvinar at at sem. Donec a varius eros. Vivamus quis nisi elementum, porttitor est vel, fermentum mauris. Mauris dapibus, orci sed pellentesque iaculis, turpis lacus ultrices lorem, nec pretium dolor velit eget felis. Duis at ultricies justo, eu tempus libero.</p1>
                 </div>
-                <div class="title">
-                                <h1>Contact Us</h1>
+                
+                <div class="sticky-player">
+                                <div id="player">
+                                    <div class="monkey-player player-1">
+                                       <div class="monkey-player-controls">
+                                         <button id="monkey-play" onclick="playAudio();">
+                                           <i class="fa fa-play"></i>
+                                         </button>
+                                         <button id="monkey-pause"onclick="pauseAudio();">
+                                           <i class="fa fa-pause"></i>
+                                         </button>
+                                         <button onclick="previous();">
+                                                        <i class="fas fa-backward"></i>
+                                        </button>
+                                         <button onclick="next();">
+                                                        <i class="fas fa-forward"></i>
+                                        </button>
+                                         <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
+                                         <progress id= "progress" class="monkey-progress"></progress>
+                                         <span class="monkey-position" style="display: none; left: 463px;"></span>
+                                         <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
+                                         <button id="monkey-mute" onclick="mute();">
+                                           <i id="muteIcon" class="fa fa-volume-up"></i>
+                                         </button>
+                                         <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
+                                           <i class="fa fa-download"></i>
+                                         </button>
+                                         <button onclick="RewindAudio();">
+                                            <i class="fas fa-step-backward"></i>
+                                          </button>
+                                         <button onclick="forwardAudio();">
+                                           <i class="fas fa-step-forward"></i>
+                                         </button>
+                                       </div>
+                                       <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
+                                        <source>
+                                        Your browser does not support the audio element.
+                                      </audio>
+                                    </div>
+                                 </div>
+                        
                                 </div>
-                                <div class="container">
-                                        <div style="text-align:center">
-                                        </div>
-                                        <div class="row">
-                                          <div class="column">
-                                            <img src="/Assets/download.png" style="width:100%">
-                                          </div>
-                                          <div class="column">
-                                            <form action="/action_page.php">
-                                              <label for="fname">First Name</label>
-                                              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                                              <label for="lname">Last Name</label>
-                                              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                                              <label for="email">Email</label>
-                                              <input type="text" id="email" name="email" placeholder="Your email..">
-                                              <label for="subject">Subject</label>
-                                              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                                              <input type="submit" value="Submit">
-                                            </form>
-                                          </div>
-                                        </div>
-                                      </div>
                 <footer id="footer">
                         <div class="BottomDiv">
                                 <ul class="copyright">

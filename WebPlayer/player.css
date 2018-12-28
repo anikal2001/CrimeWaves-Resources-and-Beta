@@ -9,7 +9,8 @@
 
 body
 {
-    font-family: 'Carrois Gothic', sans-serif ;
+    font-family: 'Carrois Gothic', sans-serif!important ;
+    margin:0px;
 }
 visually-hidden, .monkey-player button span {
   position: absolute !important;
@@ -25,8 +26,11 @@ visually-hidden, .monkey-player button span {
 }
 
 /* Its A Monkey - Custom Player */
+#player{
+  width: 100%;
+  display: none;
+}
 .monkey-player{
-  margin:40px;
   display:flex;
   align-items: center;
 }
@@ -34,13 +38,13 @@ visually-hidden, .monkey-player button span {
   display:inherit;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #7F3F41;
-  color: #FFFFFF;
+  background: #ffffff;
+  color: #7F3F41;
   font-size: 16px;
   height: 50px;
   padding: 20px 0px 20px 0px;
   line-height: 22px;
-  width: 650px;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -48,8 +52,8 @@ visually-hidden, .monkey-player button span {
 .monkey-player button {
   display: inherit; 
    position: relative;
-  background: #7F3F41;
-  color: #fff;
+  background: #fff;
+  color: #7F3F41;
   border: 0;
   font-size:20px;
   border-radius: 20px;
@@ -79,14 +83,14 @@ visually-hidden, .monkey-player button span {
 
 
 .monkey-player .monkey-progress[value]::-webkit-progress-bar {
-  background-color: #7F3F41;
+  background-color: #FFFFFF;
   border-radius: 0;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 .monkey-player .monkey-progress[value]::-webkit-progress-value {
-  background: #fff;
+  background: #7F3F41;
   border-radius: 2px
 }
 
@@ -117,15 +121,18 @@ visually-hidden, .monkey-player button span {
   display: inherit;
 }
 .accordion {
-  background-color: #7F3F41;
+  font-family: 'Carrois Gothic', sans-serif!important;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: #7f3f41;
+  border: 1px black;
   color: #fff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
-  text-align: left;
+  text-align:center;
   outline: none;
-  font-size: 15px;
+  font-size: 24px;
   transition: 0.4s;
 }
 
@@ -135,7 +142,7 @@ visually-hidden, .monkey-player button span {
 
 .accordion:after {
   content: '\002B';
-  color: #7F3F41;
+  color: #FFFFFF;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -150,11 +157,70 @@ visually-hidden, .monkey-player button span {
   background-color: white;
   max-height: 0px;
   overflow: hidden;
+  border: 1px solid black;
   transition: max-height 0.2s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
+.sticky-player{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.seasonAccordions{
+  margin: 40px;
+}
+.playButton{
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+  color: #7F3F41;
+  border: #7F3F41 2px solid;
+  padding:10px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  min-height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: white;
+}
+
+.playButton:hover{
+  text-shadow:0 5px 10px  rgba(127, 63, 65, 0.6);
+  box-shadow: 0 5px 15px  rgba(127, 63, 65, 0.8);
+}
+.playButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.playButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.playButton:hover span {
+  padding-right: 25px;
+}
+
+.playButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.fa-play-circle{
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=player.css.map */

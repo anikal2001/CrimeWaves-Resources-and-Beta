@@ -11,9 +11,25 @@
     <link href="player.css" rel="stylesheet">
 </head>
 <body>
+
+
     <button class="accordion">Episode 1</button>
     <div class="panel">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+    
+    <button class="accordion">Episode 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="accordion">Episode 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="footer">
         <div class="player">
             <div class="monkey-player player-1">
                <div class="monkey-player-controls">
@@ -46,83 +62,8 @@
               </audio>
             </div>
          </div>
-        
-    </div>
-    
-    <button class="accordion">Episode 2</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="player">
-          <div class="monkey-player player-1">
-             <div class="monkey-player-controls">
-               <button id="monkey-play" onclick="playAudio();">
-                 <i class="fa fa-play"></i>
-               </button>
-               <button id="monkey-pause"onclick="pauseAudio();">
-                 <i class="fa fa-pause"></i>
-               </button>
-               <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
-               <progress id= "progress" class="monkey-progress"></progress>
-               <span class="monkey-position" style="display: none; left: 463px;"></span>
-               <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
-               <button id="monkey-mute" onclick="mute();">
-                 <i id="muteIcon" class="fa fa-volume-up"></i>
-               </button>
-               <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
-                 <i class="fa fa-download"></i>
-               </button>
-               <button onclick="RewindAudio();">
-                  <i class="fas fa-step-backward"></i>
-                </button>
-               <button onclick="forwardAudio();">
-                 <i class="fas fa-step-forward"></i>
-               </button>
-             </div>
-             <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
-              <source src="/Assets/Difference-(Mr-Jatt.com).mp3">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-       </div>
-    </div>
-    
-    <button class="accordion">Episode 3</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="player">
-          <div class="monkey-player player-1">
-             <div class="monkey-player-controls">
-               <button id="monkey-play" onclick="playAudio();">
-                 <i class="fa fa-play"></i>
-               </button>
-               <button id="monkey-pause"onclick="pauseAudio();">
-                 <i class="fa fa-pause"></i>
-               </button>
-               <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
-               <progress id= "progress" class="monkey-progress"></progress>
-               <span class="monkey-position" style="display: none; left: 463px;"></span>
-               <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
-               <button id="monkey-mute" onclick="mute();">
-                 <i id="muteIcon" class="fa fa-volume-up"></i>
-               </button>
-               <button class="monkey-download" data-url="https://itsamonkey.com/itsamonkey127.mp3" onclick="ga('send', 'event', 'Recent Episodes', 'download', 'Episode 127');">
-                 <i class="fa fa-download"></i>
-               </button>
-               <button onclick="RewindAudio();">
-                  <i class="fas fa-step-backward"></i>
-                </button>
-               <button onclick="forwardAudio();">
-                 <i class="fas fa-step-forward"></i>
-               </button>
-             </div>
-             <audio id="myAudio" ontimeupdate="updateTrackTime(this)">
-              <source src="/Assets/Difference-(Mr-Jatt.com).mp3">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-       </div>
-    
-    </div>
+
+        </div>
     
              <script>
 //Turning JS time into regular time

@@ -1,7 +1,7 @@
 window.onscroll = function() {menuScroll()};
 function menuScroll(){
     if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-        document.getElementById("topnav").className = "changetopnav";
+        document.getElementById("topnav").className = "test";
         var x = document.getElementById("topnav");
         var y = x.getElementsByTagName("a");
         for (var i = 0; i < y.length; i++) {
@@ -9,7 +9,7 @@ function menuScroll(){
         }
 
         }else {
-        document.getElementById("revertTopnav").className = "test1";
+        document.getElementById("topnav").className = "test1";
         var x = document.getElementById("topnav");
         var y = x.getElementsByTagName("a");
         var i;
