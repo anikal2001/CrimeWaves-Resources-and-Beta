@@ -1,26 +1,50 @@
 <!doctype html>
 <html>
-        <link rel="stylesheet" href="/css/contact.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/player.css">
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+                <script>
+                  // Initialize Firebase
+                  var config = {
+                    apiKey: "AIzaSyCp4VF3Mv1ggfGAIAmpwGw0_lTUpR_SxdY",
+                    authDomain: "crimewaves-cpss.firebaseapp.com",
+                    databaseURL: "https://crimewaves-cpss.firebaseio.com",
+                    projectId: "crimewaves-cpss",
+                    storageBucket: "crimewaves-cpss.appspot.com",
+                    messagingSenderId: "541219081247"
+                  };
+                  firebase.initializeApp(config);
+                </script>
+            <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.7.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.7.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.7.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.7.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.7.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+
+    
+        <link rel="stylesheet" href="/public/css/contact.css">
+        <link rel="stylesheet" href="/public/css/styles.css">
+        <link rel="stylesheet" href="/public/css/player.css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine|Unlock" rel="stylesheet">
         <!--<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
         <header id= "headStyling">
-                <div id="topnav">
-                        <a  href="index.html">Home</a>
-                        <div id="dropdown">
-                        <button id="dropbtn">Seasons
-                                <i class="fa fa-caret-down"></i>
-                        </button>
-                              <div class="dropdown-content">
-                                <a href="Season1.html">Season 1</a>
-                                <a href="Season2.html">Season 2</a>
-                                <a href="#">Season 3</a>
-                              </div>
-                        </div>
-                        <a href="AboutPage.html">About</a> 
-                </div>
+                        <div id="topnav">
+                                        <a  href="/public/index.html">Home</a>
+                                        <div id="dropdown">
+                                                <button id="dropbtn">Seasons
+                                                        <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                      <div class="dropdown-content">
+                                                        <a href="/public/Season1.html">Season 1</a>
+                                                        <a href="/public/Season2.html">Season 2</a>
+                                                      </div>
+                                                </div> 
+                                        <a href="/public/AboutPage.html">About</a>  
+                                </div>
         </header>
         <body class = "bodystyling">
                 <div id="parallax" class="bg-index">
@@ -89,7 +113,7 @@
                                         </div>
                                         <div class="row">
                                           <div class="column">
-                                            <img src="/Assets/Pictures/download.png" style="width:100%">
+                                            <img src="/public/Assets/Pictures/download.png" style="width:100%">
                                           </div>
                                           <div class="column">
                                             <form action="/action_page.php">

@@ -1,3 +1,5 @@
+var firebase = require("firebase");
+
 window.onscroll = function() {menuScroll()};
 function menuScroll(){
     if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
