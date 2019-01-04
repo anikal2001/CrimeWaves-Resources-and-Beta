@@ -1,0 +1,295 @@
+/* Breakpoints
+...................................................................................... */
+/* Helpers
+...................................................................................... */
+/* Classes
+...................................................................................... */
+
+
+
+body
+{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif!important;
+    /*font-family: 'Carrois Gothic', sans-serif!important ;*/
+    margin:0px;
+}
+visually-hidden, .monkey-player button span {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+   /*IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+
+}
+.height-fix {
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  clear: both;
+}
+
+.inline-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.days-active {
+  color: #F41B40;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mf-red {
+  color: #ef3f57;
+}
+
+#player{
+  width: 100%;
+  display: none;
+}
+.monkey-player{
+  display:flex;
+  align-items: left;
+}
+.monkey-player .monkey-player-controls {
+  display:inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+  color: #7F3F41;
+  font-size: 16px;
+  height: 50px;
+  padding: 20px 0px 20px 0px;
+  line-height: 22px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#songtitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+  color: #7F3F41;
+
+
+}
+#songtitle h1{
+  margin: 0px;
+  padding: 0px;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+#songtitle i{
+  font-size: 30px;
+  cursor: pointer;
+}
+.monkey-player:first-child{
+  border-top: 2px #7F3F41 solid;
+  display:flex;
+  flex-direction: column;
+  background: #ffffff;
+  margin: 0px;
+  padding: 0px;
+
+}
+.monkey-player button {
+  display: inherit; 
+   position: relative;
+  background: #fff;
+  color: #7F3F41;
+  border: 0;
+  font-size:20px;
+  border-radius: 20px;
+  -webkit-appearance: none;
+  min-width: 32px;
+  outline: none;
+}
+
+.monkey-player button:hover{
+  opacity:0.7;
+}
+
+.monkey-player .monkey-progress {
+  align-content: center;
+  height: 20px;
+  padding: 0px 20px 0px 0px;
+  width: calc(100% - 310px);
+  opacity: 1;
+  color:#7F3F41;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+
+.monkey-player .monkey-progress[value]::-webkit-progress-bar {
+  background-color: #FFFFFF;
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.monkey-player .monkey-progress[value]::-webkit-progress-value {
+  background: #7F3F41;
+  border-radius: 2px
+}
+
+.monkey-player .monkey-position {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  background: #FFFFFF;
+  height: 11px;
+  width: 2px;
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.monkey-player .monkey-time {
+  display: inherit;
+  font-size: 13px;
+  padding: 0 5px;
+  text-align: center;
+  width: 4.5em;
+}
+
+.monkey-player #monkey-pause {
+  display: none;
+}
+#monkey-play{
+  display: inherit;
+}
+.accordion {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: #7f3f41;
+  border: 1px black;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align:center;
+  outline: none;
+  font-size: 24px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #7F3F41;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #FFFFFF;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0px;
+  overflow: hidden;
+  border: 1px solid black;
+  transition: max-height 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+
+}
+.panel h1{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.panel p{
+  font-size: 1.2rem;
+  padding-left:1.2rem;
+  padding-right: 1.2rem;
+}
+
+.sticky-player{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.seasonAccordions{
+  margin: 40px;
+}
+.fa-play-circle{
+  vertical-align: middle;
+  padding-right:8px;
+  font-size: 24px;
+}
+.playButton{
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  color: #7F3F41;
+  border: #7F3F41 2px solid;
+  padding:10px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  min-height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: white;
+}
+
+.playButton i{
+  padding-bottom:5px;
+}
+
+.playButton:hover{
+  text-shadow:0 5px 10px  rgba(127, 63, 65, 0.6);
+  box-shadow: 0 5px 15px  rgba(127, 63, 65, 0.8);
+}
+.playButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.playButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.playButton:hover span {
+  padding-right: 25px;
+}
+
+.playButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/*# sourceMappingURL=player.css.map */

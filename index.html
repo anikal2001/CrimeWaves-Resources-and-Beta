@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/player.css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine|Unlock" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
         <header id= "headStyling">
                 <div id="topnav">
@@ -14,16 +15,15 @@
                         </button>
                               <div class="dropdown-content">
                                 <a href="Season1.html">Season 1</a>
-                                <a href="#">Season 2</a>
+                                <a href="Season2.html">Season 2</a>
                                 <a href="#">Season 3</a>
                               </div>
                         </div>
                         <a href="AboutPage.html">About</a> 
-                        <a href="about.html">aboot</a>
                 </div>
         </header>
         <body class = "bodystyling">
-                <div id="parallax">
+                <div id="parallax" class="bg-index">
                         <h1>CRIME WAVES</h1>
                         <button class="headerButton" onclick="showPlayer();"><span>Listen Now</span> </span></button>
                 </div>
@@ -34,15 +34,53 @@
                 </a>
                 </a>
                 <div class="paraStyling">
+                        <br>
                     <h1>Scroll Up and Down this page to see the parallax scrolling effect.
                     This div is just here to enable scrolling.
                     Tip: Try to remove the background-attachment property to remove the scrolling effect.</h1>
-                    <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac placerat purus, vitae condimentum risus. Nullam rhoncus, tellus at elementum condimentum, sem tellus vulputate nulla, nec pretium nisl sapien ut nunc. Nunc nibh ante, consectetur ac erat quis, lacinia tincidunt felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras felis felis, finibus vitae tempor ac, molestie eget diam. Nam consequat, est eu sollicitudin scelerisque, sapien arcu convallis tellus, in sodales ipsum justo et nulla. In in neque tincidunt, efficitur urna at, ornare urna. Proin cursus tincidunt libero, facilisis sagittis dui porttitor ut. Maecenas ullamcorper massa sit amet est luctus, sed accumsan magna posuere. Maecenas venenatis congue nisi vitae malesuada. Duis bibendum sodales imperdiet. Aliquam luctus mattis ex in rhoncus.
-
-                            Curabitur eu ornare ipsum. Sed in bibendum risus, vel consequat ex. Phasellus egestas in quam quis ultricies. Vestibulum bibendum dolor eu dignissim mollis. Praesent interdum lorem sit amet libero pulvinar, porta finibus quam aliquam. Suspendisse in magna placerat, congue sapien nec, porta lectus. Cras pharetra accumsan elit, sed elementum lectus tincidunt facilisis. Curabitur justo massa, imperdiet et tristique id, fermentum id tellus. Sed dignissim urna est, in imperdiet quam congue eu. Nulla volutpat sed sem sed malesuada. Sed suscipit nibh id lectus condimentum, non fermentum dui fringilla.
-                            
-                            Proin mattis, ex sed auctor aliquam, lectus massa sagittis orci, id lobortis ligula dolor eu massa. Duis mattis ante in lacus interdum interdum. Duis vestibulum sit amet dui sed facilisis. Suspendisse potenti. Sed eu arcu at eros dapibus pulvinar at at sem. Donec a varius eros. Vivamus quis nisi elementum, porttitor est vel, fermentum mauris. Mauris dapibus, orci sed pellentesque iaculis, turpis lacus ultrices lorem, nec pretium dolor velit eget felis. Duis at ultricies justo, eu tempus libero.</p1>
+                    <p1>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac placerat purus, vitae condimentum risus.
+                             Nullam rhoncus, tellus at elementum condimentum, sem tellus vulputate nulla, nec pretium nisl sapien ut nunc. 
+                             Nunc nibh ante, consectetur ac erat quis, lacinia tincidunt felis. Class aptent taciti sociosqu ad litora torquent
+                              per conubia nostra, per inceptos himenaeos. Cras felis felis, finibus vitae tempor ac, molestie eget diam. Nam 
+                              consequat, est eu sollicitudin scelerisque, sapien arcu convallis tellus, in sodales ipsum justo et nulla. In 
+                              in neque tincidunt, efficitur urna at, ornare urna. Proin cursus tincidunt libero, facilisis sagittis dui porttitor 
+                              ut. Maecenas ullamcorper massa sit amet est luctus, sed accumsan magna posuere. Maecenas venenatis congue nisi vitae 
+                              malesuada. Duis bibendum sodales imperdiet. Aliquam luctus mattis ex in rhoncus. Curabitur eu ornare ipsum. Sed in 
+                              bibendum risus, vel consequat ex. Phasellus egestas in quam quis ultricies. Vestibulum bibendum dolor eu dignissim mollis.
+                              Praesent interdum lorem sit amet libero pulvinar, porta finibus quam aliquam. Suspendisse in magna placerat, congue sapien
+                               nec, porta lectus. Cras pharetra accumsan elit, sed elementum lectus tincidunt facilisis. Curabitur justo massa, imperdiet
+                               et tristique id, fermentum id tellus. Sed dignissim urna est, in imperdiet quam congue eu. Nulla volutpat sed sem sed malesuada.
+                               Sed suscipit nibh id lectus condimentum, non fermentum dui fringilla.Proin mattis, ex sed auctor aliquam, lectus massa sagittis
+                               orci, id lobortis ligula dolor eu massa. Duis mattis ante in lacus interdum interdum. Duis vestibulum sit amet dui sed facilisis.
+                               Suspendisse potenti. Sed eu arcu at eros dapibus pulvinar at at sem. Donec a varius eros. Vivamus quis nisi elementum, 
+                               porttitor est vel, fermentum mauris. Mauris dapibus, orci sed pellentesque iaculis, turpis lacus ultrices lorem, nec 
+                               pretium dolor velit eget felis. Duis at ultricies justo, eu tempus libero.</p1>
+                               <br>
                 </div>
+                <div class="container1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis vel sequi doloribus a aperiam, nihil sunt
+                        adipisci eius fugiat molestias, excepturi, minima deserunt laboriosam! Accusantium voluptas hic natus similique
+                        quidem ut adipisci omnis? Esse quod soluta perspiciatis. Architecto tenetur facere veritatis minus sint, ad corporis,
+                        cum culpa pariatur sapiente ex similique id expedita? Quibusdam earum dicta quae. Adipisci error numquam optio 
+                        similique sapiente minima cumque aliquid ipsa consequuntur perspiciatis eveniet dignissimos nam, rerum accusantium 
+                        saepe harum. Tempora eveniet quos mollitia cum, harum delectus officiis culpa porro blanditiis maiores temporibus 
+                        voluptates libero, dicta, cumque error id inventore corporis dolore? Adipisci!</p>
+                </div>
+                <div class="action">
+                                <h1>Follow Us On:</h1>
+                                <div class="Icons">
+                                    <ul>
+                                            <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                                            <li><a href="https://www.patreon.com"><i class="fab fa-patreon"></i></a></li>
+                                            <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="https://www.soundcloud.com"><i class="fab fa-soundcloud"></i></a></li>
+            
+                                    </ul>
+                                </div>
+                            </div>    
+
                 <div class="title">
                                 <h1>Contact Us</h1>
                                 </div>
@@ -51,7 +89,7 @@
                                         </div>
                                         <div class="row">
                                           <div class="column">
-                                            <img src="/Assets/download.png" style="width:100%">
+                                            <img src="/Assets/Pictures/download.png" style="width:100%">
                                           </div>
                                           <div class="column">
                                             <form action="/action_page.php">
@@ -82,6 +120,6 @@
 
                 </footer>
         </body>
-        <script src="scripts.js"></script>
+        <script src="/scripts/scripts.js"></script>
 
 </html>
