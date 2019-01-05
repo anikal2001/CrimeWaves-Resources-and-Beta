@@ -209,17 +209,17 @@ body, header, footer
 
 }
 .bg-index{
-    background-image: url("/public/Assets/Pictures/bruh2.jpg");
+    background-image: url("/Assets/Pictures/bruh2.jpg");
 }
 .bg-season1{
-    background-image: url("/public/Assets/Pictures/Season1.jpeg");
+    background-image: url("/Assets/Pictures/Season1.jpeg");
 
 }
 .bg-season2{
-    background-image: url("/public/Assets/Pictures/Montreal.jpg");
+    background-image: url("/Assets/Pictures/Montreal.jpg");
 }
 .bg-about{
-    background-image: url("/public/Assets/Pictures/about.jpeg");
+    background-image: url("/Assets/Pictures/about.jpeg");
 }
 
 
@@ -352,7 +352,17 @@ body, header, footer
     opacity: 1;
     right: 0;
   }
+.homediv{
+    padding: 20px;
+}
 
+.homediv h1{
+    font-size:28px;
+}
+
+.homediv p{
+    font-size: 40px;
+}
 .container1{
     background-color: #7F3F41;
     color: white;

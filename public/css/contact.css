@@ -42,7 +42,7 @@ body {
   }
   
   /* Style the container/contact section */
-  .container {
+  .contactform {
     display: flex;
     overflow: hidden;
     box-sizing: border-box;

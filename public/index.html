@@ -1,49 +1,37 @@
 <!doctype html>
 <html>
+        <!--FIREBASE INITIALIZATIONS-->
         <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-                <script>
-                  // Initialize Firebase
-                  var config = {
-                    apiKey: "AIzaSyCp4VF3Mv1ggfGAIAmpwGw0_lTUpR_SxdY",
-                    authDomain: "crimewaves-cpss.firebaseapp.com",
-                    databaseURL: "https://crimewaves-cpss.firebaseio.com",
-                    projectId: "crimewaves-cpss",
-                    storageBucket: "crimewaves-cpss.appspot.com",
-                    messagingSenderId: "541219081247"
-                  };
-                  firebase.initializeApp(config);
-                </script>
             <!-- update the version number as needed -->
     <script defer src="/__/firebase/5.7.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/5.7.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.7.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.7.2/firebase-messaging.js"></script>
     <script defer src="/__/firebase/5.7.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <base href="https://crimewaves-cpss.firebaseapp.com/">
 
 
-    
-        <link rel="stylesheet" href="/public/css/contact.css">
-        <link rel="stylesheet" href="/public/css/styles.css">
-        <link rel="stylesheet" href="/public/css/player.css">
+        <!--WEBSITE HTML-->
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/player.css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine|Unlock" rel="stylesheet">
         <!--<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
         <header id= "headStyling">
                         <div id="topnav">
-                                        <a  href="/public/index.html">Home</a>
+                                        <a  href="/index.html">Home</a>
                                         <div id="dropdown">
                                                 <button id="dropbtn">Seasons
                                                         <i class="fa fa-caret-down"></i>
                                                 </button>
                                                       <div class="dropdown-content">
-                                                        <a href="/public/Season1.html">Season 1</a>
-                                                        <a href="/public/Season2.html">Season 2</a>
+                                                        <a href="/Season1.html">Season 1</a>
+                                                        <a href="/Season2.html">Season 2</a>
                                                       </div>
                                                 </div> 
-                                        <a href="/public/AboutPage.html">About</a>  
+                                        <a href="/AboutPage.html">About</a>  
                                 </div>
         </header>
         <body class = "bodystyling">
@@ -58,30 +46,31 @@
                 </a>
                 </a>
                 <div class="paraStyling">
-                        <br>
-                    <h1>Scroll Up and Down this page to see the parallax scrolling effect.
-                    This div is just here to enable scrolling.
-                    Tip: Try to remove the background-attachment property to remove the scrolling effect.</h1>
-                    <p1>
-                            <br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac placerat purus, vitae condimentum risus.
-                             Nullam rhoncus, tellus at elementum condimentum, sem tellus vulputate nulla, nec pretium nisl sapien ut nunc. 
-                             Nunc nibh ante, consectetur ac erat quis, lacinia tincidunt felis. Class aptent taciti sociosqu ad litora torquent
-                              per conubia nostra, per inceptos himenaeos. Cras felis felis, finibus vitae tempor ac, molestie eget diam. Nam 
-                              consequat, est eu sollicitudin scelerisque, sapien arcu convallis tellus, in sodales ipsum justo et nulla. In 
-                              in neque tincidunt, efficitur urna at, ornare urna. Proin cursus tincidunt libero, facilisis sagittis dui porttitor 
-                              ut. Maecenas ullamcorper massa sit amet est luctus, sed accumsan magna posuere. Maecenas venenatis congue nisi vitae 
-                              malesuada. Duis bibendum sodales imperdiet. Aliquam luctus mattis ex in rhoncus. Curabitur eu ornare ipsum. Sed in 
-                              bibendum risus, vel consequat ex. Phasellus egestas in quam quis ultricies. Vestibulum bibendum dolor eu dignissim mollis.
-                              Praesent interdum lorem sit amet libero pulvinar, porta finibus quam aliquam. Suspendisse in magna placerat, congue sapien
-                               nec, porta lectus. Cras pharetra accumsan elit, sed elementum lectus tincidunt facilisis. Curabitur justo massa, imperdiet
-                               et tristique id, fermentum id tellus. Sed dignissim urna est, in imperdiet quam congue eu. Nulla volutpat sed sem sed malesuada.
-                               Sed suscipit nibh id lectus condimentum, non fermentum dui fringilla.Proin mattis, ex sed auctor aliquam, lectus massa sagittis
-                               orci, id lobortis ligula dolor eu massa. Duis mattis ante in lacus interdum interdum. Duis vestibulum sit amet dui sed facilisis.
-                               Suspendisse potenti. Sed eu arcu at eros dapibus pulvinar at at sem. Donec a varius eros. Vivamus quis nisi elementum, 
-                               porttitor est vel, fermentum mauris. Mauris dapibus, orci sed pellentesque iaculis, turpis lacus ultrices lorem, nec 
-                               pretium dolor velit eget felis. Duis at ultricies justo, eu tempus libero.</p1>
+                        <div class="homediv">
+                                <h1>Scroll Up and Down this page to see the parallax scrolling effect.
+                                This div is just here to enable scrolling.
+                                Tip: Try to remove the background-attachment property to remove the scrolling effect.</h1>
+                                <p>
+                                 <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac placerat purus, vitae condimentum risus.
+                                Nullam rhoncus, tellus at elementum condimentum, sem tellus vulputate nulla, nec pretium nisl sapien ut nunc. 
+                                Nunc nibh ante, consectetur ac erat quis, lacinia tincidunt felis. Class aptent taciti sociosqu ad litora torquent
+                                per conubia nostra, per inceptos himenaeos. Cras felis felis, finibus vitae tempor ac, molestie eget diam. Nam 
+                                consequat, est eu sollicitudin scelerisque, sapien arcu convallis tellus, in sodales ipsum justo et nulla. In 
+                                in neque tincidunt, efficitur urna at, ornare urna. Proin cursus tincidunt libero, facilisis sagittis dui porttitor 
+                                ut. Maecenas ullamcorper massa sit amet est luctus, sed accumsan magna posuere. Maecenas venenatis congue nisi vitae 
+                                malesuada. Duis bibendum sodales imperdiet. Aliquam luctus mattis ex in rhoncus. Curabitur eu ornare ipsum. Sed in 
+                                bibendum risus, vel consequat ex. Phasellus egestas in quam quis ultricies. Vestibulum bibendum dolor eu dignissim mollis.
+                                Praesent interdum lorem sit amet libero pulvinar, porta finibus quam aliquam. Suspendisse in magna placerat, congue sapien
+                                nec, porta lectus. Cras pharetra accumsan elit, sed elementum lectus tincidunt facilisis. Curabitur justo massa, imperdiet
+                                et tristique id, fermentum id tellus. Sed dignissim urna est, in imperdiet quam congue eu. Nulla volutpat sed sem sed malesuada.
+                                Sed suscipit nibh id lectus condimentum, non fermentum dui fringilla.Proin mattis, ex sed auctor aliquam, lectus massa sagittis
+                                orci, id lobortis ligula dolor eu massa. Duis mattis ante in lacus interdum interdum. Duis vestibulum sit amet dui sed facilisis.
+                                Suspendisse potenti. Sed eu arcu at eros dapibus pulvinar at at sem. Donec a varius eros. Vivamus quis nisi elementum, 
+                                porttitor est vel, fermentum mauris. Mauris dapibus, orci sed pellentesque iaculis, turpis lacus ultrices lorem, nec 
+                                pretium dolor velit eget felis. Duis at ultricies justo, eu tempus libero.</p>
                                <br>
+                        </div>
                 </div>
                 <div class="container1">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis vel sequi doloribus a aperiam, nihil sunt
@@ -108,24 +97,24 @@
                 <div class="title">
                                 <h1>Contact Us</h1>
                                 </div>
-                                <div class="container">
+                                <div class="contactform">
                                         <div style="text-align:center">
                                         </div>
                                         <div class="row">
                                           <div class="column">
-                                            <img src="/public/Assets/Pictures/download.png" style="width:100%">
+                                            <img src="/Assets/Pictures/download.png" style="width:100%">
                                           </div>
                                           <div class="column">
-                                            <form action="/action_page.php">
-                                              <label for="fname">First Name</label>
-                                              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                                              <label for="lname">Last Name</label>
-                                              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                            <form id="cForm">
+                                              <label for="firstname">First Name</label>
+                                              <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                                              <label for="lastname">Last Name</label>
+                                              <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
                                               <label for="email">Email</label>
                                               <input type="text" id="email" name="email" placeholder="Your email..">
                                               <label for="subject">Subject</label>
-                                              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                                              <input type="submit" value="Submit">
+                                              <textarea id="subject" name="subject" placeholder="Write your message..." style="height:170px"></textarea>
+                                              <button type="submit" id ="submit">Submit</button>
                                             </form>
                                           </div>
                                         </div>

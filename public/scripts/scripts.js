@@ -1,5 +1,16 @@
-var firebase = require("firebase");
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyCp4VF3Mv1ggfGAIAmpwGw0_lTUpR_SxdY",
+    authDomain: "crimewaves-cpss.firebaseapp.com",
+    databaseURL: "https://crimewaves-cpss.firebaseio.com",
+    projectId: "crimewaves-cpss",
+    storageBucket: "crimewaves-cpss.appspot.com",
+    messagingSenderId: "541219081247"
+};
+firebase.initializeApp(config);
 
+
+//Change Nav Bar Colour On Scroll
 window.onscroll = function() {menuScroll()};
 function menuScroll(){
     if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
@@ -38,7 +49,7 @@ function formatSecondsAsTime(secs, format) {
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if(filename=="Season1.html"){
-    var EpisodeList =["/Assets/Difference.mp3","/Assets/Palazzo.mp3","/Assets/Collarbone.mp3"];
+    var EpisodeList =["/Assets/Season1/Eyeofthetiger.mp3","/Assets/Season1/DontStopBelievin.mp3", "/Assets/Season1/BohemianRhapsody.mp3", "/Assets/Season1/SweetChildOMine.mp3","/Assets/Season1/SweetHomeAlabama.mp3","/Assets/Season1/Hotlinebling.mp3"];
 }
 else if (filename=="Season2.html"){
     var EpisodeList =["/Assets/Difference.mp3","/Assets/Palazzo.mp3","/Assets/Collarbone.mp3"];
@@ -150,7 +161,7 @@ audio.src= EpisodeList[currentSong];
        } 
      });
    }
-//Show player code
+//Show player on click
    function showPlayer(clicked_id) {
     document.getElementById("player").style.display = "block";
     document.getElementById("playerFill").style.display = "block";
@@ -167,13 +178,45 @@ audio.src= EpisodeList[currentSong];
     playAudio();
 
  }
+ //Hide Player on Click
  function removePlayer(){
      document.getElementById("player").style.display= "none";
      document.getElementById("playerFill").style.display = "none";
      pauseAudio();
  }
 
+//Firebase Emailing for Contact Form
+document.getElementById("cForm").addEventListener("submit", submitForm)
 
+var messageRef = firebase.database().ref("messages");
+
+function submitForm(e){
+    e.preventDefault();
+//Get Values
+    var firstName=getInputVal("firstname");
+    var lastName=getInputVal("lastname");
+    var email=getInputVal("email");
+    var subject=getInputVal("subject");
+    
+    saveMessage(firstname, lastname, email, subject);
+}
+
+//Function to get form values
+function getInputVal(id){
+    return document.getElementById(id).value;
+}
+
+
+function saveMessage(firstname, lastname, email, subject){
+    var newMessageref = messageRef.push;
+    newMessageref.set({
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        subject: subject
+
+    })
+}
 
 
 

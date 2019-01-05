@@ -1,25 +1,25 @@
 <!doctype html>
 <html>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/public/css/contact.css">
-        <link rel="stylesheet" href="/public/css/styles.css">
-        <link rel="stylesheet" href="/public/css/player.css">
+        <link rel="stylesheet" href="/css/contact.css" type="text/css">
+        <link rel="stylesheet" href="/css/styles.css" type="text/css">
+        <link rel="stylesheet" href="/css/player.css" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine|Unlock" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
         <header id= "headStyling">
             <div id="topnav">
-                <a  href="/public/index.html">Home</a>
+                <a  href="/index.html">Home</a>
                 <div id="dropdown">
                         <button id="dropbtn">Seasons
                                 <i class="fa fa-caret-down"></i>
                         </button>
                               <div class="dropdown-content">
-                                <a href="/public/Season1.html">Season 1</a>
-                                <a href="/public/Season2.html">Season 2</a>
+                                <a href="/Season1.html">Season 1</a>
+                                <a href="/Season2.html">Season 2</a>
                               </div>
                         </div> 
-                <a href="/public/AboutPage.html">About</a>  
+                <a href="/AboutPage.html">About</a>  
         </div>
         </header>
         <body class = "bodystyling">
@@ -34,7 +34,7 @@
                 <div class="paraStyling">
                     <div class="aboutPC">
                             <div class="column" style="padding-top:0px;">
-                            <img src="/public/Assets/Pictures/season2.jpeg" style="width:100%;">
+                            <img src="/Assets/Pictures/season2.jpeg" style="width:100%;">
                             </div>
                             <div class="text" style="font-size:24px">
                                     <p1>Season Two analyzes the horrific events taken place on December 6, 1989 at the École Polytechnique, 
@@ -96,28 +96,31 @@
                 <li><a>Link 4</a></li>
             </ul>
         </div>
-                <div class="container">
-                                <div style="text-align:center">
-                                </div>
-                                <div class="row">
-                                  <div class="column">
-                                    <img src="/public/Assets/Pictures/download.png" style="width:100%">
-                                  </div>
-                                  <div class="column">
-                                    <form action="/action_page.php">
-                                      <label for="fname">First Name</label>
-                                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                                      <label for="lname">Last Name</label>
-                                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                                      <label for="email">Email</label>
-                                      <input type="text" id="email" name="email" placeholder="Your email..">
-                                      <label for="subject">Subject</label>
-                                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                                      <input type="submit" value="Submit">
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>        
+        <div class="title">
+            <h1>Contact Us</h1>
+            </div>
+            <div class="contactform">
+                    <div style="text-align:center">
+                    </div>
+                    <div class="row">
+                      <div class="column">
+                        <img src="/Assets/Pictures/download.png" style="width:100%">
+                      </div>
+                      <div class="column">
+                        <form id="cForm">
+                          <label for="firstname">First Name</label>
+                          <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                          <label for="lastname">Last Name</label>
+                          <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                          <label for="email">Email</label>
+                          <input type="text" id="email" name="email" placeholder="Your email..">
+                          <label for="subject">Subject</label>
+                          <textarea id="subject" name="subject" placeholder="Write your message..." style="height:170px"></textarea>
+                          <button type="submit" id ="submit">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>     
                 
                 <div class="sticky-player">
                                 <div id="player">
@@ -182,6 +185,6 @@
                         
                         </div>
                 </footer>
-                <script src="/public/scripts/scripts.js"></script>
+                <script src="/scripts/scripts.js"></script>
 
 </html>
