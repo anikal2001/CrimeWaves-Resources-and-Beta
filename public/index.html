@@ -1,18 +1,20 @@
 <!doctype html>
 <html>
         <!--FIREBASE INITIALIZATIONS-->
-        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
             <!-- update the version number as needed -->
     <script defer src="/__/firebase/5.7.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/5.7.2/firebase-auth.js"></script>
+    <script src="/__/firebase/5.7.0/firebase-database.js"></script>
     <script defer src="/__/firebase/5.7.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <base href="https://crimewaves-cpss.firebaseapp.com/">
+    <!--<base href="https://crimewaves-cpss.firebaseapp.com/">-->
 
 
         <!--WEBSITE HTML-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/contact.css">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/player.css">
@@ -39,17 +41,18 @@
                         <h1>CRIME WAVES</h1>
                         <button class="headerButton" onclick="showPlayer();"><span>Listen Now</span> </span></button>
                 </div>
-                <a href="https://www.google.ca/">
-                        <div class="MiddleDiv BackgroundImage">
-                                <button class="season1"><span><img>Listen Now</span> </span></button>
-                         </div>
-                </a>
-                </a>
+                <div class="container1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis vel sequi doloribus a aperiam, nihil sunt
+                                adipisci eius fugiat molestias, excepturi, minima deserunt laboriosam! Accusantium voluptas hic natus similique
+                                quidem ut adipisci omnis? Esse quod soluta perspiciatis. Architecto tenetur facere veritatis minus sint, ad corporis,
+                                cum culpa pariatur sapiente ex similique id expedita? Quibusdam earum dicta quae. Adipisci error numquam optio 
+                                similique sapiente minima cumque aliquid ipsa consequuntur perspiciatis eveniet dignissimos nam, rerum accusantium 
+                                saepe harum. Tempora eveniet quos mollitia cum, harum delectus officiis culpa porro blanditiis maiores temporibus 
+                                voluptates libero, dicta, cumque error id inventore corporis dolore? Adipisci!</p>
+                        </div>
                 <div class="paraStyling">
                         <div class="homediv">
-                                <h1>Scroll Up and Down this page to see the parallax scrolling effect.
-                                This div is just here to enable scrolling.
-                                Tip: Try to remove the background-attachment property to remove the scrolling effect.</h1>
+                                <h1>Season 2: Releasing Feb.19</h1>
                                 <p>
                                  <br>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac placerat purus, vitae condimentum risus.
@@ -72,15 +75,12 @@
                                <br>
                         </div>
                 </div>
-                <div class="container1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis vel sequi doloribus a aperiam, nihil sunt
-                        adipisci eius fugiat molestias, excepturi, minima deserunt laboriosam! Accusantium voluptas hic natus similique
-                        quidem ut adipisci omnis? Esse quod soluta perspiciatis. Architecto tenetur facere veritatis minus sint, ad corporis,
-                        cum culpa pariatur sapiente ex similique id expedita? Quibusdam earum dicta quae. Adipisci error numquam optio 
-                        similique sapiente minima cumque aliquid ipsa consequuntur perspiciatis eveniet dignissimos nam, rerum accusantium 
-                        saepe harum. Tempora eveniet quos mollitia cum, harum delectus officiis culpa porro blanditiis maiores temporibus 
-                        voluptates libero, dicta, cumque error id inventore corporis dolore? Adipisci!</p>
-                </div>
+                <a href="https://www.google.ca/">
+                        <div class="listenButton BackgroundImage">
+                                <button class="season1"><span><img><h2>Listen To Season 2 Now</h2></span></button>
+                         </div>
+                </a>
+
                 <div class="action">
                                 <h1>Follow Us On:</h1>
                                 <div class="Icons">
@@ -105,13 +105,14 @@
                                             <img src="/Assets/Pictures/download.png" style="width:100%">
                                           </div>
                                           <div class="column">
-                                            <form id="cForm">
+                                            <form id="cForm" method="POST">
+                                              <div id="alert">Your message has been sent</div>
                                               <label for="firstname">First Name</label>
-                                              <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                                              <input type="text" id="firstname" name="firstname" placeholder="Your name.." required>
                                               <label for="lastname">Last Name</label>
-                                              <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                                              <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
                                               <label for="email">Email</label>
-                                              <input type="text" id="email" name="email" placeholder="Your email..">
+                                              <input type="text" id="email" name="email" placeholder="Your email.." required>
                                               <label for="subject">Subject</label>
                                               <textarea id="subject" name="subject" placeholder="Write your message..." style="height:170px"></textarea>
                                               <button type="submit" id ="submit">Submit</button>
@@ -133,6 +134,7 @@
 
                 </footer>
         </body>
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
         <script src="/scripts/scripts.js"></script>
 
 </html>

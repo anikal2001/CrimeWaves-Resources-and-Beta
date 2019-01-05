@@ -13,6 +13,7 @@ body {
     background-color: #ffffff;
     overflow: hidden;
     font-size: 24px;
+    width:100%;
 }
 
 
@@ -27,7 +28,7 @@ body {
     resize: vertical;
   }
   
-  input[type=submit] {
+  #submit {
     box-sizing: border-box;
     background-color: #7F3F41;
     color: white;
@@ -37,8 +38,9 @@ body {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+#submit:hover {
     box-sizing: border-box;
+    opacity: 0.7;
   }
   
   /* Style the container/contact section */
@@ -71,3 +73,13 @@ body {
     }
   }
   
+
+  #alert{
+    text-align: center;
+    background-color: #7F3F41;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    display: none
+
+  }

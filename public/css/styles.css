@@ -126,6 +126,7 @@ body, header, footer
     min-height:auto;
     display: flex;
     justify-content: center;
+    width:100%;
     flex-direction: column;
 }
 
@@ -200,7 +201,7 @@ body, header, footer
     top: 0px; 
     left: 0px;
     margin: 0px;
-
+    width: 100%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center center;
@@ -293,35 +294,34 @@ body, header, footer
 }
 
 
-.MiddleDiv{
-    font-size: 54px;
-    background-color: #7F3F41;
-    /*border: black 2px solid;
-    border-radius: 5px;
-    */
+.listenButton{
+    font-size: 60px;
     display: flex;
     justify-content: center;
     cursor: pointer;
-    -webkit-filter: grayscale(70%); 
-    height: 100px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*
+
 .BackgroundImage{
-    background-image: url("Assets/BruceMcArthur.jpg");
+    background-image: url("/Assets/Pictures/Season2Index.jpeg");
+    width:100%;
 }
+/*
 .BackgroundImage1{
     background-image: url("Assets/Montreal.jpg");
 }
 */
-.MiddleDiv .season1{
+.listenButton .season1{
     background: none;
     color:white;
+    font-weight: 900;
 	border: none;
     font: inherit;
+    min-height: 250px;
+    max-height: 350px;
 	cursor: pointer;
     outline: inherit;
     width: 100%;
@@ -329,9 +329,11 @@ body, header, footer
 
 .season1 span {
     cursor: pointer;
+    max-height:250px;
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    display: inline-block;
   }
   
   
@@ -339,7 +341,9 @@ body, header, footer
     content: '\00bb';
     position: absolute;
     opacity: 0;
+    line-height: 250px;
     top: 0;
+    text-align: center;
     right: -30px;
     transition: 0.5s;
   }
@@ -352,17 +356,33 @@ body, header, footer
     opacity: 1;
     right: 0;
   }
+
+  .season1 span h2{
+      text-align: center;
+      margin:0px;
+      top:50%;
+      left:50%;
+      font-size: 60px;
+  }
+
+
+
 .homediv{
-    padding: 20px;
+    padding: 1.7rem;
+    text-align:center
 }
 
 .homediv h1{
-    font-size:28px;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .homediv p{
-    font-size: 40px;
+    font-size: 18px;
 }
+
+
 .container1{
     background-color: #7F3F41;
     color: white;
@@ -399,6 +419,7 @@ body, header, footer
 /*SOCIAL MEDIA BAR*/
 
 .action{
+    width: 100%;
     font-size: 1.5rem;
     border-bottom: 2px black solid;
 }
@@ -415,10 +436,11 @@ body, header, footer
     color: #7F3F41;
 }
 
-
-.Icons ul{
+.Icons{
+    width:100%;
+}
+.action .Icons ul{
     display: flex;
-    font-size: 24px;
     justify-content: center;
     margin:0px;
     flex-direction: row;
@@ -428,16 +450,31 @@ body, header, footer
 }
 .Icons .fab {
     align-items: center;
-    font-size: 70px;
+    font-size: 4.5rem;
 }
 
 .Icons li{
+    display: flex;
+    justify-content: center;
     padding-left: 100px;
 }
 .Icons li:first-child{
     padding-left: 0px;
 }
+@media screen and (max-width: 550px) {
+    .action .Icons li {
+        border: 0;
+        display: flex;
+        justify-content: center;
+        line-height: 1.65em;
+        margin: 0;
+        padding: 0.5em 0;
+    }
 
+    .Icons .fab{
+        font-size:2.5rem;
+    }
+}
 
 
 
@@ -541,5 +578,4 @@ body, header, footer
                 margin: 0;
                 padding: 0.5em 0;
             }
-
         }

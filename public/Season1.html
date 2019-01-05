@@ -59,17 +59,8 @@
                             LISOWICK, SELIM ESEN, ANDREW KINSMAN, SKANDARAJ NAVARATNAM</strong></p>
                         <button class="playButton" id="ep1" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 1</span></button>
                         <br>
-                        <div class="relLinks">
-                            <h1 style="padding-left:15px;" >Related Links</h1>
-                            <ul>
-                                <li><a>Link 1</a></li>
-                                <li><a>Link 2</a></li>
-                                <li><a>Link 3</a></li>
-                                <li><a>Link 4</a></li>
-                            </ul>
-                        </div>
-                        <br>
                 </div>
+
                 <button class="accordion">Episode 2</button>
                 <div class="panel">
                     <h1>Crime Scene Investigation</h1>
@@ -80,17 +71,8 @@
                         forensics during a crime event. Lead Detective Hank Idsinga from the Bruce McArthur case as
                         well as Detective Thomas Greer provide a fascinating view into how police use forensics.</p>
                     <button class="playButton" id="ep2" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 2</span></button>
-                    <div class="relLinks">
-                        <h1 style="padding-left:15px;" >Related Links</h1>
-                        <ul>
-                            <li><a>Link 1</a></li>
-                            <li><a>Link 2</a></li>
-                            <li><a>Link 3</a></li>
-                            <li><a>Link 4</a></li>
-                        </ul>
-                    </div>
                     <br>
-                </div>
+                    </div>
                 <button class="accordion">Episode 3</button>
                 <div class="panel">
                     <h1>Canadian Serial Murderers</h1>
@@ -101,15 +83,6 @@
                         provides understanding of how the allegations against Bruce McArthur made be true and how
                         he was able to stay under the radar of the police</p>
                     <button class="playButton" id="ep3" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 3</span></button>
-                    <div class="relLinks">
-                        <h1 style="padding-left:15px;" >Related Links</h1>
-                        <ul>
-                            <li><a>Link 1</a></li>
-                            <li><a>Link 2</a></li>
-                            <li><a>Link 3</a></li>
-                            <li><a>Link 4</a></li>
-                        </ul>
-                    </div>
                     <br>
                   </div>
                 <button class="accordion">Episode 4</button>
@@ -123,15 +96,6 @@
                         Greater Toronto Area, give opinions on the McArthur investigation and provides insight
                         into the community’s relationship with Toronto Police.</p>
                     <button class="playButton" id="ep4" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 4</span></button>
-                    <div class="relLinks">
-                        <h1 style="padding-left:15px;">Related Links</h1>
-                        <ul>
-                            <li><a>Link 1</a></li>
-                            <li><a>Link 2</a></li>
-                            <li><a>Link 3</a></li>
-                            <li><a>Link 4</a></li>
-                        </ul>
-                    </div>
                     <br>
                 </div>
                 <button class="accordion">Episode 5</button>
@@ -146,15 +110,7 @@
                         are conducted with Jeff Gray, Kenyon Wallace, and Vjosa Isai. This episode is dedicated to Najat
                         Ahmed who lost her life in a tragic bus accident during the summer of 2018.</p>
                     <button class="playButton" id="ep5" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 5</span></button>
-                    <div class="relLinks">
-                        <h1 style="padding-left:15px;" >Related Links</h1>
-                        <ul>
-                            <li><a>Link 1</a></li>
-                            <li><a>Link 2</a></li>
-                            <li><a>Link 3</a></li>
-                            <li><a>Link 4</a></li>
-                        </ul>
-                    </div>
+
                     <br>
             </div>
 
@@ -168,15 +124,21 @@
                       justice student Ally Lawrence and educator Justin Schikschneit, both who offer opinions on
                       why/how alleged serial killer Bruce McArthur committed these horrible crimes.</p>
                   <button class="playButton" id="ep6" onclick="showPlayer(this.id);"><span><i class="far fa-play-circle"></i>Episode 6</span></button>
-                  <div class="relLinks">
-                      <h1 style="padding-left:15px;" >Related Links</h1>
-                      <ul>
-                          <li><a>Link 1</a></li>
-                          <li><a>Link 2</a></li>
-                          <li><a>Link 3</a></li>
-                          <li><a>Link 4</a></li>
-                      </ul>
-                  </div>
+                  <br>
+              </div>
+    
+              <button class="accordion">Related Links</button>
+              <div class="panel">
+                    <div class="relLinks">
+                            <h1 style="padding-left:15px;" >Related Links</h1>
+                            <ul>
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                                <li><a>Link 3</a></li>
+                                <li><a>Link 4</a></li>
+                            </ul>
+                        </div>
+
                   <br>
               </div>
         </div>
@@ -192,19 +154,20 @@
                           </div>
                           <div class="column">
                             <form id="cForm">
+                               <div id="alert">Your message has been sent</div>
                               <label for="firstname">First Name</label>
-                              <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+                              <input type="text" id="firstname" name="firstname" placeholder="Your name.." required>
                               <label for="lastname">Last Name</label>
-                              <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                              <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
                               <label for="email">Email</label>
-                              <input type="text" id="email" name="email" placeholder="Your email..">
+                              <input type="text" id="email" name="email" placeholder="Your email.." required>
                               <label for="subject">Subject</label>
                               <textarea id="subject" name="subject" placeholder="Write your message..." style="height:170px"></textarea>
                               <button type="submit" id ="submit">Submit</button>
                             </form>
                           </div>
                         </div>
-                      </div>     
+                      </div>   
                 
                 <div class="sticky-player">
                                 <div id="player">
@@ -269,6 +232,8 @@
                         
                         </div>
                 </footer>
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
         <script src="/scripts/scripts.js"></script>
+        <script src="/scripts/Player.js"></script>
 
 </html>
