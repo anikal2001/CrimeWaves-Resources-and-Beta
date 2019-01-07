@@ -15,7 +15,7 @@ function formatSecondsAsTime(secs, format) {
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if(filename=="Season1.html"){
-  EpisodeList =["/Assets/Season1/Eyeofthetiger.mp3","/Assets/Season1/DontStopBelievin.mp3", "/Assets/Season1/BohemianRhapsody.mp3", "/Assets/Season1/SweetChildOMine.mp3","/Assets/Season1/SweetHomeAlabama.mp3","/Assets/Season1/Hotlinebling.mp3"];
+  EpisodeList =["/Assets/Season1/Episode 1_Introduction.mp3","/Assets/Season1/DontStopBelievin.mp3", "/Assets/Season1/BohemianRhapsody.mp3", "/Assets/Season1/SweetChildOMine.mp3","/Assets/Season1/SweetHomeAlabama.mp3","/Assets/Season1/Hotlinebling.mp3"];
   currentSong = 0;
   audio = document.getElementById("myAudio")
   audio.src= EpisodeList[currentSong];
