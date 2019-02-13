@@ -53,11 +53,11 @@ function playAudio() {
  }
 //Forward Audio Function
  function forwardAudio() {
-   audio.currentTime += 30.0; /**tried also with audio.currentTime here. Didn't worked **/
+   audio.currentTime += 10.0; /**tried also with audio.currentTime here. Didn't worked **/
  }
 
  function RewindAudio() {
-   audio.currentTime -= 30.0; /**tried also with audio.currentTime here. Didn't worked **/
+   audio.currentTime -= 10.0; /**tried also with audio.currentTime here. Didn't worked **/
  }
 //Update Time and Progress
  function updateTrackTime(track){
@@ -100,17 +100,26 @@ function playAudio() {
       audio.src= EpisodeList[currentSong];
       audio.play();
 
-      var songName="Episode " + (currentSong+1)
+      var songName = EpisodeList[currentSong];
+      var filename = songName.substring(songName.lastIndexOf('/')+1);
+      songTitle =filename.substring(0, filename.lastIndexOf("."))
+
+      var songName="Episode " + (currentSong+1) + ":"+songTitle;
       document.getElementById("audioName").innerHTML= songName;
   }
   function previous(){
-      if(currentSong<0){
+      if(currentSong<=0){
           currentSong=0;
       }else{
 
           currentSong--;
       }
+      var songName="Episode " + (currentSong+1) + ":"+songTitle;
+      document.getElementById("audioName").innerHTML= songName;
       audio.src= EpisodeList[currentSong];
+      var songName = EpisodeList[currentSong];
+      var filename = songName.substring(songName.lastIndexOf('/')+1);
+      songTitle =filename.substring(0, filename.lastIndexOf("."))
       audio.play();
   }
 //Accordion Code
@@ -137,7 +146,7 @@ function playAudio() {
   var currentSong = num;
 
 
-  songName="Episode " + (num+1);
+  songName="Episode " + (num+1)+ ":"+songTitle;
   document.getElementById("audioName").innerHTML= songName;
 
   var audio = document.getElementById("myAudio")

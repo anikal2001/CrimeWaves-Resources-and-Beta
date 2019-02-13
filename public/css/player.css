@@ -81,6 +81,7 @@ visually-hidden, .monkey-player button span {
 
 
 }
+
 #songtitle h1{
   margin: 0px;
   padding: 0px;
@@ -102,7 +103,6 @@ visually-hidden, .monkey-player button span {
 
 }
 .monkey-player button {
-  display: inherit; 
    position: relative;
   background: #fff;
   color: #7F3F41;
@@ -112,6 +112,9 @@ visually-hidden, .monkey-player button span {
   -webkit-appearance: none;
   min-width: 32px;
   outline: none;
+}
+.monkey-player #monkey-pause i{
+  padding-bottom:3px;
 }
 
 .monkey-player button:hover{
@@ -205,7 +208,8 @@ visually-hidden, .monkey-player button span {
 }
 
 .panel {
-  padding: 0 18px;
+  padding-right: 18px;
+  padding-left: 18px;
   background-color: white;
   max-height: 0px;
   overflow: hidden;
@@ -217,9 +221,11 @@ visually-hidden, .monkey-player button span {
  
 
 }
-.panel h1{
+.panel h2{
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 20px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .panel p{
@@ -236,6 +242,7 @@ visually-hidden, .monkey-player button span {
 
 .seasonAccordions{
   margin: 40px;
+  margin-bottom: 20px;
 }
 .fa-play-circle{
   vertical-align: middle;
