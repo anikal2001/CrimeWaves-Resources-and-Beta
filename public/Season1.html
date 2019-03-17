@@ -10,7 +10,7 @@
         <!--<base href="https://crimewaves-cpss.firebaseapp.com/public/">-->
                 <header id= "headStyling">
                 <div id="topnav">
-                        <a  href="https://crimewaves-cpss.firebaseapp.com">Home</a>
+                        <a  href="/index.html">Home</a>
                         <div id="dropdown">
                                 <button id="dropbtn">Seasons
                                         <i class="fa fa-caret-down"></i>
@@ -186,7 +186,10 @@
                                                         <i class="fas fa-forward"></i>
                                         </button>
                                          <span class="monkey-currenttime monkey-time" id ="demo">00:00:00</span>
-                                         <progress id= "progress" class="monkey-progress"></progress>
+                                         <div id="seek-bar">
+                                              <div id="fill" ></div>
+                                              <div id="handle"></div>
+                                          </div>
                                          <span class="monkey-position" style="display: none; left: 463px;"></span>
                                          <span class="monkey-duration monkey-time" id ="duration">00:00:00</span>
                                          <button id="monkey-mute" onclick="mute();">

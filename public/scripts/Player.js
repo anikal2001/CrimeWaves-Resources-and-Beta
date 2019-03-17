@@ -13,16 +13,17 @@ function formatSecondsAsTime(secs, format) {
         }
 //Getting the episode list by id
 var url = window.location.pathname;
+var audio;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if(filename=="Season1.html"){
-  EpisodeList =["/Assets/Season1/Episode 1_Introduction.mp3","/Assets/Season1/DontStopBelievin.mp3", "/Assets/Season1/BohemianRhapsody.mp3", "/Assets/Season1/SweetChildOMine.mp3","/Assets/Season1/SweetHomeAlabama.mp3","/Assets/Season1/Hotlinebling.mp3"];
-  currentSong = 0;
-  audio = document.getElementById("myAudio")
-  audio.src= EpisodeList[currentSong];
+  var EpisodeList =["/public/Assets/Season1/Episode2.mp3","/public/Assets/Season1/Episode 2.mp3", "/public/Assets/Season1/Episode 3.mp3", "/public/Assets/Season1/Episode 4.mp3","/public/Assets/Season1/Episode 5.mp3","/public/Assets/Season1/Episode 6.mp3"];
 }
 else if (filename=="Season2.html"){
-  var EpisodeList =["/Assets/Difference.mp3","/Assets/Palazzo.mp3","/Assets/Collarbone.mp3"];
+  var EpisodeList =["/Assets/Season 2/Episode 1.mp3","/Assets/Season 2/Episode 2.mp3", "/Assets/Season 2/Episode 3.mp3", "/Assets/Season 2/Episode 4.mp3","/Assets/Season 2/Episode 5.mp3"];
 }
+currentSong = 0;
+audio = document.getElementById("myAudio")
+audio.src= EpisodeList[currentSong];
 
 
 //Play and Pause Audio
@@ -60,35 +61,36 @@ function playAudio() {
    audio.currentTime -= 10.0; /**tried also with audio.currentTime here. Didn't worked **/
  }
 //Update Time and Progress
- function updateTrackTime(track){
-   var currTimeDiv = document.getElementById('demo');
-   var durationDiv = document.getElementById('duration');
+function updateTrackTime(track){
+  var currTimeDiv = document.getElementById('demo');
+  var durationDiv = document.getElementById('duration');
 
-   var currTime = Math.floor(track.currentTime).toString();
-   var duration = Math.floor(track.duration).toString();
+  var currTime = Math.floor(track.currentTime).toString();
+  var duration = Math.floor(track.duration).toString();
 
-   var percentage = currTime / duration
-   document.getElementById("progress").value = percentage;
+  var percentage = currTime / duration
+  document.getElementById("fill").style.width= percentage*100+"%";
+  //document.getElementById("seek-bar").value = percentage*100;
 
-   currTimeDiv.innerHTML = formatSecondsAsTime(currTime);
+  currTimeDiv.innerHTML = formatSecondsAsTime(currTime);
 
-   if (isNaN(duration)){
-     durationDiv.innerHTML = '00:00';
-     } 
-   else{
-     durationDiv.innerHTML = formatSecondsAsTime(duration);
-     }
- }
-//Skip Forward Code
- var player = document.querySelector("audio");
- var progressBar = document.querySelector("progress");
- progressBar.addEventListener("click", seek);
- 
- function seek(e) {
-   var percent = (e.offsetX+6) / this.offsetWidth;
-   player.currentTime = percent * player.duration;
-   progressBar.value = percent / 100;
- }
+  if (isNaN(duration)){
+    durationDiv.innerHTML = '00:00';
+    } 
+  else{
+    durationDiv.innerHTML = formatSecondsAsTime(duration);
+    }
+}
+
+//SeekBar Code
+var progressBar = document.getElementById("seek-bar");
+progressBar.addEventListener("click", function seek(e) {
+  var percent = (e.offsetX) / this.offsetWidth;
+  audio.currentTime = percent * audio.duration;
+  console.log(audio.currentTime)
+  var fillbar = document.getElementById("fill");
+  fillbar.style.width = (percent*100)+"%";
+});
 //Next Episode Code
   function next(){
       if (currentSong==EpisodeList.length-1){
@@ -146,7 +148,7 @@ function playAudio() {
   var currentSong = num;
 
 
-  songName="Episode " + (num+1)+ ":"+songTitle;
+  songName="Episode " + (num+1)+ ":"+filename;
   document.getElementById("audioName").innerHTML= songName;
 
   var audio = document.getElementById("myAudio")

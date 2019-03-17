@@ -51,7 +51,7 @@ visually-hidden, .monkey-player button span {
 
 #player{
   width: 100%;
-  display: none;
+  display: block;
 }
 .monkey-player{
   display:flex;
@@ -121,6 +121,26 @@ visually-hidden, .monkey-player button span {
   opacity:0.7;
 }
 
+#seek-bar{
+  width: calc(100% - 250px);
+  height: 20px;
+  background-color:gray;
+  display: flex;
+  cursor: pointer;
+}
+#fill{
+  height: 20px;
+  background-color:#7F3F41;
+}
+#handle{
+  width: 1.2px;
+  height: 15px;
+  background-color: #7F3F41;
+  margin-top: 0.2rem;
+  transform: scale(2.3);
+}
+
+/*
 .monkey-player .monkey-progress {
   align-content: center;
   height: 20px;
@@ -136,7 +156,6 @@ visually-hidden, .monkey-player button span {
 
 
 
-
 .monkey-player .monkey-progress[value]::-webkit-progress-bar {
   background-color: #FFFFFF;
   border-radius: 0;
@@ -149,8 +168,10 @@ visually-hidden, .monkey-player button span {
   border-radius: 2px
 }
 
+*/
+
 .monkey-player .monkey-position {
-  display: none;
+  display: block;
   position: absolute;
   overflow: hidden;
   background: #FFFFFF;
@@ -166,7 +187,6 @@ visually-hidden, .monkey-player button span {
   font-size: 13px;
   padding: 0 5px;
   text-align: center;
-  width: 4.5em;
 }
 
 .monkey-player #monkey-pause {
@@ -235,8 +255,9 @@ visually-hidden, .monkey-player button span {
 }
 
 .sticky-player{
-  position: fixed;
+  position: none;
   bottom: 0;
+  display: none;
   width: 100%;
 }
 
@@ -298,5 +319,3 @@ visually-hidden, .monkey-player button span {
   right: 0;
 }
 
-
-/*# sourceMappingURL=player.css.map */
