@@ -51,7 +51,7 @@ visually-hidden, .monkey-player button span {
 
 #player{
   width: 100%;
-  display: block;
+  display: none;
 }
 .monkey-player{
   display:flex;
@@ -232,7 +232,7 @@ visually-hidden, .monkey-player button span {
   padding-left: 18px;
   background-color: white;
   max-height: 0px;
-  overflow: hidden;
+  overflow: scroll;
   border: 1px solid black;
   transition: max-height 0.2s ease-out;
   display: flex;
@@ -255,9 +255,8 @@ visually-hidden, .monkey-player button span {
 }
 
 .sticky-player{
-  position: none;
+  position: fixed;
   bottom: 0;
-  display: none;
   width: 100%;
 }
 
