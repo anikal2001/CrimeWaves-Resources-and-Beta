@@ -24,6 +24,7 @@ else if (filename=="Season2.html"){
 currentSong = 0;
 audio = document.getElementById("myAudio")
 audio.src= EpisodeList[currentSong];
+audio.currentTime= 45;
 
 
 //Play and Pause Audio
@@ -86,9 +87,8 @@ function updateTrackTime(track){
 var progressBar = document.getElementById("seek-bar");
 progressBar.addEventListener("click", function seek(e) {
   var percent = (e.offsetX) / this.offsetWidth;
+  var audio = document.getElementById("myAudio")
   bruh = percent*audio.currentTime;
-  console.log(bruh)
-  audio.currentTime = 1;
   var fillbar = document.getElementById("fill");
   fillbar.style.width = (percent*100)+"%";
 });
