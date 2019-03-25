@@ -1,4 +1,6 @@
-
+*{
+    outline: none;
+}
 
 body, header, footer
 {
@@ -10,7 +12,8 @@ body, header, footer
 
 .bodystyling{
     margin:0px;
-    padding:0px
+    padding:0px;
+    background: #cecece85;
 }
 #headStyling {
     display : block; 
@@ -30,6 +33,7 @@ body, header, footer
     z-index: 1
 
 }
+
 .changeTopnav {
     background-color: #7F3F41;
     -webkit-transition: all 1s ease-in-out;
@@ -153,7 +157,6 @@ body, header, footer
     font-size: 1.5rem;
 }
 #para2{
-    border-top: 2px black solid;
     background-color: #7F3F41;
     float: right;
     color: white;
@@ -191,7 +194,7 @@ body, header, footer
     /* The image used */
     background-blend-mode: overlay;
     scroll-behavior: smooth;
-    -webkit-filter: grayscale(70%); 
+    /*-webkit-filter: grayscale(70%); */
     /* Set a specific height */
     min-height: 500px; 
 
@@ -241,12 +244,17 @@ body, header, footer
     margin: 0px;
     color: white;
     text-decoration: underline;
-    font-family: 'Unlock', cursive;
+    font-family: inherit;
     font-size: 4em;
     text-shadow: 3px #7F3F41;
     font-weight: 800;
     line-height: 1;
     text-align:center;
+}
+#parallax img{
+    z-index: 1;
+    max-height:15rem;
+    border-radius: 15rem;
 }
 
 
@@ -258,11 +266,17 @@ body, header, footer
     padding:10px 20px;
     border-radius: 10px;
     margin-top: 20px;
-    box-shadow: 1px 2px red;
+    box-shadow: 1px 2px #7F3F41;
     transition: all 0.5s;
     cursor: pointer;
     background-color: white;
 
+}
+.headerButton a{
+    text-decoration: none;
+}
+.headerButton a:visited{
+    color:#7F3F41;
 }
 
 
@@ -373,7 +387,6 @@ body, header, footer
 }
 
 .homediv h1{
-    padding-top: 3rem;
     font-size: 38px;
     text-transform: uppercase;
     text-align: center;
@@ -405,7 +418,6 @@ body, header, footer
     font-size: 24px; 
     margin:0px;
     width: 100%;
-    border-top: 2px black solid;
     /*background-color: #7F3F41;
     color:white;*/
     text-decoration: None;
@@ -423,8 +435,10 @@ body, header, footer
 
 .action{
     width: 100%;
+    text-align: center;
     font-size: 1.5rem;
     background-color: #e6e6e685;
+    border-bottom: 1px solid #7F3F41;
 }
 .action .fa-facebook{
     color: #7F3F41;

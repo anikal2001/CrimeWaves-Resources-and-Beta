@@ -16,7 +16,7 @@ var url = window.location.pathname;
 var audio;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if(filename=="Season1.html"){
-  var EpisodeList =["/Assets/S1/Episode2.mp3","/public/Assets/S1/Episode2.mp3", "/public/Assets/S1/Episode 3.mp3", "/public/Assets/S1/Episode 4.mp3","/public/Assets/S1/Episode 5.mp3","/public/Assets/S1/Episode 6.mp3"];
+  var EpisodeList =["/Assets/S1/Episode2.mp3","/Assets/S1/Episode2.mp3", "/Assets/S1/Episode 3.mp3", "/Assets/S1/Episode 4.mp3","/Assets/S1/Episode 5.mp3","/Assets/S1/Episode 6.mp3"];
 }
 else if (filename=="Season2.html"){
   var EpisodeList =["/Assets/S2/Episode 1.mp3","/Assets/S2/Episode 2.mp3", "/Assets/S2/Episode 3.mp3", "/Assets/S2/Episode 4.mp3","/Assets/S2/Episode 5.mp3"];
@@ -24,7 +24,6 @@ else if (filename=="Season2.html"){
 currentSong = 0;
 audio = document.getElementById("myAudio")
 audio.src= EpisodeList[currentSong];
-audio.currentTime= 45;
 
 
 //Play and Pause Audio
@@ -87,8 +86,7 @@ function updateTrackTime(track){
 var progressBar = document.getElementById("seek-bar");
 progressBar.addEventListener("click", function seek(e) {
   var percent = (e.offsetX) / this.offsetWidth;
-  var audio = document.getElementById("myAudio")
-  bruh = percent*audio.currentTime;
+  audio.currentTime = percent*audio.duration;
   var fillbar = document.getElementById("fill");
   fillbar.style.width = (percent*100)+"%";
 });
@@ -102,12 +100,12 @@ progressBar.addEventListener("click", function seek(e) {
       }
       audio.src= EpisodeList[currentSong];
       audio.play();
-
+      console.log(currentSong);
       var songName = EpisodeList[currentSong];
       var filename = songName.substring(songName.lastIndexOf('/')+1);
       songTitle =filename.substring(0, filename.lastIndexOf("."))
 
-      var songName="Episode " + (currentSong+1) + ":"+songTitle;
+      var songName="Episode " + (currentSong+1);
       document.getElementById("audioName").innerHTML= songName;
   }
   function previous(){
@@ -117,7 +115,7 @@ progressBar.addEventListener("click", function seek(e) {
 
           currentSong--;
       }
-      var songName="Episode " + (currentSong+1) + ":"+songTitle;
+      var songName="Episode " + (currentSong+1);
       document.getElementById("audioName").innerHTML= songName;
       audio.src= EpisodeList[currentSong];
       var songName = EpisodeList[currentSong];
