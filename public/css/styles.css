@@ -83,7 +83,7 @@ body, header, footer
     background-color: inherit;
     font-family: inherit;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing:0.09375rem;
     text-transform: uppercase;
     margin: 0;
@@ -353,7 +353,7 @@ body, header, footer
     content: '\00bb';
     position: absolute;
     opacity: 0;
-    line-height: 250px;
+    line-height: 15rem;
     top: 0;
     text-align: center;
     right: -30px;

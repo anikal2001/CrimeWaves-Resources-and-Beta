@@ -16,7 +16,7 @@ var url = window.location.pathname;
 var audio;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if(filename=="Season1.html"){
-  var EpisodeList =["/Assets/S1/Episode2.mp3","/Assets/S1/Episode2.mp3", "/Assets/S1/Episode 3.mp3", "/Assets/S1/Episode 4.mp3","/Assets/S1/Episode 5.mp3","/Assets/S1/Episode 6.mp3"];
+  var EpisodeList =["/Assets/S1/Episode 1.mp3","/Assets/S1/Episode2.mp3", "/Assets/S1/Episode 3.mp3", "/Assets/S1/Episode 4.mp3","/Assets/S1/Episode 5.mp3","/Assets/S1/Episode 6.mp3"];
 }
 else if (filename=="Season2.html"){
   var EpisodeList =["/Assets/S2/Episode 1.mp3","/Assets/S2/Episode 2.mp3", "/Assets/S2/Episode 3.mp3", "/Assets/S2/Episode 4.mp3","/Assets/S2/Episode 5.mp3"];
