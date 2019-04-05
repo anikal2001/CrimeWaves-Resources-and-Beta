@@ -119,9 +119,13 @@ body, header, footer
     flex-direction: column;
   }
   
-
-
-
+  #buttons{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  
 
 
 
@@ -306,7 +310,9 @@ body, header, footer
   opacity: 1;
   right: 0;
 }
-
+#seasonbutton{
+    text-decoration: none;
+}
 
 .listenButton{
     font-size: 60px;
@@ -339,33 +345,34 @@ body, header, footer
     outline: inherit;
     width: 100%;
 }
-
-.season1 span {
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.wrapper span {
     cursor: pointer;
     max-height:250px;
-    display: inline-block;
+    display: flex;
     position: relative;
     transition: 0.5s;
-    display: inline-block;
   }
   
   
-  .season1 span:after {
+  .wrapper span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
-    line-height: 15rem;
     top: 0;
     text-align: center;
     right: -30px;
     transition: 0.5s;
   }
   
-  .season1:hover span {
+  .wrapper:hover span {
     padding-right: 35px;
   }
   
-  .season1:hover span:after {
+  .wrapper:hover span:after {
     opacity: 1;
     right: 0;
   }
