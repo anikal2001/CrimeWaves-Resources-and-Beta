@@ -274,6 +274,7 @@ body, header, footer
 }
 .headerButton a{
     text-decoration: none;
+    color: #7F3F41;
 }
 .headerButton a:visited{
     color:#7F3F41;

@@ -23,7 +23,7 @@
     "babel-core": "^6.26.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "firebase-tools": "^6.5.0",
+    "firebase-tools": "^6.5.2",
     "jquery": "^3.3.1",
     "nodemailer": "^5.0.0",
     "react": "^16.5.2",
